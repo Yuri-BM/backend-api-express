@@ -12,4 +12,4 @@
 - Para que serve o Router do Express? Para separar um conjunto de rotas similares (com mesmo endpoint) em arquivos diferentes. Assim, facilitar a manutenção e escalabilidade do código.
 - O que é um padrão de projeto?
 - O que é o padrão de projeto MVC?
-- Qual a responsabilidade de cadaCamada?
+- Qual a responsabilidade de cada Camada?
