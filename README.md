@@ -10,6 +10,6 @@
 - Quais os métodos de requisição HTTP e para que serve cada um deles? Os métodos são: GET (consultar algo na base de dados), POST (inserir dados no servidor), PUT (atualização completa dos dados na base de dados), PATCH (atualização parcial dos dados na base de dados) e DELETE (exclusão de dados).
 - Para que serve o --watch ao rodar o servidor? Serve para observar alterações nos arquivos que compõem o projeto e reiniciar o servidor caso haja alguma alteração.
 - Para que serve o Router do Express? Para separar um conjunto de rotas similares (com mesmo endpoint) em arquivos diferentes. Assim, facilitar a manutenção e escalabilidade do código.
-- O que é um padrão de projeto?
-- O que é o padrão de projeto MVC?
-- Qual a responsabilidade de cada Camada?
+- O que é um padrão de projeto? Uma solução geral para resolver problemas comuns no projeto de software.
+- O que é o padrão de projeto MVC? Significa Model-View-Controller (Modelo-Visão-Controle), que estrutura as responsabilidades do código nessas três camadas.
+- Qual a responsabilidade de cada Camada? A camada Modelo é responsável pelas regras de negócio e pelo acesso aos dados no banco de dados, a camada Visão é responsável por montar e apresentar a interface para o usuário, e a camada Controle é responsável por administrar o fluxo de entrada, processamento e saída de dados.
