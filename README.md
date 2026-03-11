@@ -13,3 +13,25 @@
 - O que é um padrão de projeto? Uma solução geral para resolver problemas comuns no projeto de software.
 - O que é o padrão de projeto MVC? Significa Model-View-Controller (Modelo-Visão-Controle), que estrutura as responsabilidades do código nessas três camadas.
 - Qual a responsabilidade de cada Camada? A camada Modelo é responsável pelas regras de negócio e pelo acesso aos dados no banco de dados, a camada Visão é responsável por montar e apresentar a interface para o usuário, e a camada Controle é responsável por administrar o fluxo de entrada, processamento e saída de dados.
+- O que é um ORM? Object-Relacional Mapping (Mapeamento Objeto-Relacional), técnica de desenvolvimento que serve como uma ponte entre bancos de dados relacionais e linguagens de programação orientada a objetos.
+- Quais as vantagens de utilizar um ORM? Conseguir trocar de banco de dados mais facilmente que pelo acesso direto, além de conseguir gerar as tabelas do banco de dados a partir do Prisma Schema, e vice-versa.
+
+### Comandos Prisma
+
+Instalação
+- npm i prisma -D
+- npm i dotenv -D
+Para MySQL e MariaDB
+- npm install @prisma/client @prisma/adapter-mariadb mariadb
+
+Inicia o Prisma
+- npx prisma init --datasource-provider mysql --output ../generated/prisma
+
+Gera o banco de dados a partir do schema do Prisma
+- npx prisma db push
+
+Gera o schema do Prisma a partir do banco de dados
+- npx prisma db pull
+
+Gerar as funções para interagir com os modelos mapeados no schema
+- npx prisma generate
