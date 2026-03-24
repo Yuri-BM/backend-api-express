@@ -4,8 +4,16 @@ info:
   seq: 1
 
 http:
-  method: PATCH
-  url: http://localhost:3000/post
+  method: POST
+  url: http://localhost:3000/publication
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Yúri Post",
+        "description": "Post do Yúri",
+        "authorId": 3
+      }
   auth: inherit
 
 settings:
