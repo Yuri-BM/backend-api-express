@@ -1,0 +1,21 @@
+info:
+  name: PATCH User
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: http://localhost:3000/user/4
+  body:
+    type: json
+    data: |-
+      {
+        "avatar": "https://example.com/john.jpg"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

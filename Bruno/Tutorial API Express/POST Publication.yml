@@ -1,5 +1,5 @@
 info:
-  name: GET
+  name: POST Publication
   type: http
   seq: 1
 

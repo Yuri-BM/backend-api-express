@@ -14,7 +14,15 @@
 - O que é o padrão de projeto MVC? Significa Model-View-Controller (Modelo-Visão-Controle), que estrutura as responsabilidades do código nessas três camadas.
 - Qual a responsabilidade de cada Camada? A camada Modelo é responsável pelas regras de negócio e pelo acesso aos dados no banco de dados, a camada Visão é responsável por montar e apresentar a interface para o usuário, e a camada Controle é responsável por administrar o fluxo de entrada, processamento e saída de dados.
 - O que é um ORM? Object-Relacional Mapping (Mapeamento Objeto-Relacional), técnica de desenvolvimento que serve como uma ponte entre bancos de dados relacionais e linguagens de programação orientada a objetos.
-- Quais as vantagens de utilizar um ORM? Conseguir trocar de banco de dados mais facilmente que pelo acesso direto, além de conseguir gerar as tabelas do banco de dados a partir do Prisma Schema, e vice-versa.
+- Quais as vantagens de utilizar um ORM? Conseguir trocar de banco de dados mais facilmente que pelo acesso direto, além de conseguir gerar as tabelas do banco de dados a partir do Prisma Schema, e vice-versa. Além disso, não é necessário alterar todo o código da aplicação quando houver alteração de banco de dados.
+- Como utilizar parâmetros de URL?
+- O que é Middleware? (Exemplo Logger) O padrão de projeto para middleware em aplicações Express.js envolve a composição de middlewares em um pipeline ordenado, onde cada middleware executa uma responsabilidade específica antes de passar o controle para o próximo middleware. / Padrão de projeto que cria um fluxo de execução de funções onde cada função é uma camada chamdas middleware, e cada middleware tem a função específica na sequência de resolver uma parte de um problema.
+
+---------
+
+- Validação de Dados
+- Tratamento de Erros
+- Autenticação com JWT
 
 ### Comandos Prisma
 
