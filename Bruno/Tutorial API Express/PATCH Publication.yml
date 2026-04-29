@@ -5,7 +5,13 @@ info:
 
 http:
   method: PATCH
-  url: http://localhost:3000/publication
+  url: http://localhost:3000/publication/6
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Certificação EF"
+      }
   auth: inherit
 
 settings:

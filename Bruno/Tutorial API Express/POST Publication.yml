@@ -10,9 +10,9 @@ http:
     type: json
     data: |-
       {
-        "title": "Yúri Post",
-        "description": "Post do Yúri",
-        "authorId": 3
+        "title": "Minha certificação",
+        "description": "Certificação de inglês do Yúri",
+        "authorId": 1
       }
   auth: inherit
 
