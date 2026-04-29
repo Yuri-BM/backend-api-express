@@ -5,15 +5,15 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:3000/user/4
+  url: http://localhost:3000/user/1
   body:
     type: json
     data: |-
       {
-        "name": "John",
-        "email": "john@example.com",
-        "pass": "securepass",
-        "avatar": "https://example.com/avatar.jpg"
+        "name": "Yúri",
+        "email": "y.murakami@aluno.ifsp.edu.br",
+        "pass": "SenhaseguradoYuri@8490",
+        "avatar": "https://github.com/Yuri-BM.png"
       }
   auth: inherit
 

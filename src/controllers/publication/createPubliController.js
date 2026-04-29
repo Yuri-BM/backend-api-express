@@ -1,19 +1,25 @@
-import { createPublication } from '../../models/publicationModel.js';
+import { createPublication, validatePublication } from '../../models/publicationModel.js';
 
 export async function createPubliController(req, res){
-    try {
         
-        const publication = req.body 
-        console.log('Dados recebidos para criação de publicação:', publication); // Log para verificar os dados recebidos
+    const publication = req.body 
 
-        const result = await createPublication(publication);
+    const {success, error, data} = validatePublication(publication, {id: true})
 
-        res.status(201).json({
-            message: "Publicação criada com sucesso!",
-            publication: result
-        });
-
-    } catch (error) {
-        res.status(500).json({ message: 'Erro ao criar publicação', error: error.message });
+    if (!success) {
+        return res.status(400).json({
+            message: "Erro de validação",
+            fieldErrors: error.flatten().fieldErrors
+        })
     }
+
+    // console.log('Dados recebidos para criação de publicação:', publication); // Log para verificar os dados recebidos
+
+    const result = await createPublication(publication);
+
+    return res.status(201).json({
+        message: "Publicação criada com sucesso!",
+        publication: result
+    });
+
 }

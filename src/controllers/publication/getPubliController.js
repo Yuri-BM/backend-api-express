@@ -4,7 +4,7 @@ export async function getPubliController(req, res){
     
     const result = await getPublications()
 
-    res.json({
+    return res.json({
         message: "Publicações listadas com sucesso",
         publications: result
     })
