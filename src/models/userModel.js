@@ -23,7 +23,7 @@ const userSchema = z.object({
             .email("Email deve ser um endereço de email válido"),
     pass: z.string("Senha é obrigatório e deve ser uma string")
             .min(6, "Senha deve ter no mínimo 3 caracteres")
-            .max(255, "Senha deve ter no máximo 255 caracteres")
+            .max(300, "Senha deve ter no máximo 255 caracteres")
 })
 
 export const validateUser = (user, partial = false) => {

@@ -4,7 +4,7 @@ export async function updateAvatarUserController(req, res){
     const {id} = req.params
     const user = req.body
 
-    const {success, error, data} = validateUser(user.id, {name: true, pass: true, email: true})
+    const {success, error, data} = validateUser({id: +id, avatar: user.avatar}, {name: true, pass: true, email: true})
 
     if (!success) {
         return res.status(400).json({
