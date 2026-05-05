@@ -9,13 +9,11 @@ export async function createPubliController(req, res){
     if (!success) {
         return res.status(400).json({
             message: "Erro de validação",
-            fieldErrors: error.flatten().fieldErrors
+            fieldErrors: error
         })
     }
 
-    // console.log('Dados recebidos para criação de publicação:', publication); // Log para verificar os dados recebidos
-
-    const result = await createPublication(publication);
+    const result = await createPublication(data);
 
     return res.status(201).json({
         message: "Publicação criada com sucesso!",

@@ -9,11 +9,11 @@ export async function createUserController(req, res){
     if (!success) {
         return res.status(400).json({
             message: "Erro de validação",
-            fieldErrors: error.flatten().fieldErrors
+            fieldErrors: error
         })
     }
 
-    const result = await createUser(user);
+    const result = await createUser(data);
 
     return res.status(201).json({
         message: "Usuário criado com sucesso!",

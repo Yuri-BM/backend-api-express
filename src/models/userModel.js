@@ -1,3 +1,4 @@
+import { createValidator } from '../helpers/createValidator.js'
 import { prisma } from '../helpers/dbConnection.js'
 import * as z from 'zod'
 
@@ -13,25 +14,18 @@ import * as z from 'zod'
 const userSchema = z.object({
     id: z.int("ID é obrigatório e deve ser um valor numérico")
         .positive("ID deve ser um valor numérico positivo"),
-    avatar: z.string("Avatar é obrigatório e deve ser uma string")
-            .url("Avatar deve ser uma URL válida")
+    avatar: z.url("Avatar deve ser uma URL válida")
             .max(500, "Avatar deve ter no máximo 500 caracteres"),
     name: z.string("Nome é obrigatório e deve ser uma string")
             .min(3, "Nome deve ter no mínimo 3 caracteres")
             .max(255, "Nome deve ter no máximo 255 caracteres"),
-    email: z.string("Email é obrigatório e deve ser uma string")
-            .email("Email deve ser um endereço de email válido"),
+    email: z.email("Email deve ser um endereço de email válido"),
     pass: z.string("Senha é obrigatório e deve ser uma string")
             .min(6, "Senha deve ter no mínimo 3 caracteres")
-            .max(300, "Senha deve ter no máximo 255 caracteres")
+            .max(300, "Senha deve ter no máximo 300 caracteres")
 })
 
-export const validateUser = (user, partial = false) => {
-    if (partial) {
-        return userSchema.partial(partial).safeParse(user)
-    }
-    return userSchema.safeParse(user)
-}
+export const validateUser = createValidator(userSchema)
 
 export const createUser = async (user) => {
     return await prisma.user.create({

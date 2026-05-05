@@ -5,12 +5,12 @@ info:
 
 http:
   method: PATCH
-  url: http://localhost:3000/publication/4
+  url: http://localhost:3000/publication/6
   body:
     type: json
     data: |-
       {
-        "title": "Certificação EF"
+        "title": "Certificação EF - LinkedIn"
       }
   auth: inherit
 

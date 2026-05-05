@@ -9,11 +9,11 @@ export async function updateUserController(req, res){
     if (!success) {
         return res.status(400).json({
             message: "Erro de validação",
-            fieldErrors: error.flatten().fieldErrors
+            fieldErrors: error
         })
     }
 
-    const result = await updateUser(user, data.id)
+    const result = await updateUser(data, data.id)
 
     return res.json({
         message: "Usuário atualizado com sucesso!",

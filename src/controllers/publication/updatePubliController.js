@@ -9,11 +9,11 @@ export async function updatePubliController(req, res){
     if (!success) {
         return res.status(400).json({
             message: "Erro de validação",
-            fieldErrors: error.flatten().fieldErrors
+            fieldErrors: error
         })
     }
 
-    const result = await updatePublication(publication, data.id)
+    const result = await updatePublication(data, data.id)
 
     return res.json({
         message: "Publicação atualizada com sucesso!",

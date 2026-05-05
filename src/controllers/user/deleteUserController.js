@@ -8,11 +8,11 @@ export async function deleteUserController(req, res){
     if (!success) {
         return res.status(400).json({
             message: "Erro de validação",
-            fieldErrors: error.flatten().fieldErrors
+            fieldErrors: error
         })
     }
 
-    const result = await deleteUser(data.id) // operador + para converter string para number
+    const result = await deleteUser(data.id)
 
     return res.json({
         message: "Usuário deletado com sucesso!",
