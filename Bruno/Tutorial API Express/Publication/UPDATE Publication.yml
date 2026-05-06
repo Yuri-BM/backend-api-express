@@ -5,14 +5,14 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:3000/publication/4
+  url: http://localhost:3000/publication/7
   body:
     type: json
     data: |-
       {
-        "title": "Minha certificação EF",
-        "description": "Cerificação de inglês",
-        "authorId": 1
+        "title": "Produto homônimo",
+        "description": "Alexa vendendo Alexa na Amazon",
+        "authorId": 8
       }
   auth: inherit
 

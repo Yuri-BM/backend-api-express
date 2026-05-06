@@ -1,5 +1,5 @@
 info:
-  name: GET Publication
+  name: GET Publications
   type: http
   seq: 7
 

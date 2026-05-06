@@ -21,6 +21,9 @@
 --------- Próximos Tópicos
 
 - Validação de Dados
+  - Para que serve a biblioteca do Zod? Serve para validação dos dados em esquemas usados no MVC (camada de modelo) para a definição de regras de negócio.
+  - Para que serve a função Partial? Serve para fazer a validação de uma rota que não usa todos os dados obrigatórios, flexibilizando pontualmente a validação.
+  - Qual a diferença do parse para o safeParse? A diferença é que o parse lança uma exceção caso haja um erro na validação, exigindo o uso de try-catch, enquanto o safeParse devolve o erro como uma propriedade dentro de um objeto.
 - Tratamento de Erros
 - Autenticação com JWT
 

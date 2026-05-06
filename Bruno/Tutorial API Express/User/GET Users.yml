@@ -1,11 +1,11 @@
 info:
-  name: DELETE Publication
+  name: GET Users
   type: http
-  seq: 4
+  seq: 8
 
 http:
-  method: DELETE
-  url: http://localhost:3000/publication/3
+  method: GET
+  url: http://localhost:3000/user
   auth: inherit
 
 settings:

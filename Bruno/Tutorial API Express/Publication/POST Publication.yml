@@ -10,9 +10,9 @@ http:
     type: json
     data: |-
       {
-        "title": "Minha certificação",
-        "description": "Certificação de inglês do Yúri",
-        "authorId": 1
+        "title": "Produto confiável",
+        "description": "A Alexa vendendo uma Alexa na Amazon",
+        "authorId": 8
       }
   auth: inherit
 

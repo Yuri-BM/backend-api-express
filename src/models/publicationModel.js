@@ -17,8 +17,8 @@ const publicationSchema = z.object({
             .min(1, "Título deve ter no mínimo 1 caractere")
             .max(255, "Título deve ter no máximo 255 caracteres"),
     description: z.string("Desrição é obrigatória e deve ser uma string")
-            .min(1, "Desrição deve ter no mínimo 1 caractere")
-            .max(500, "Desrição deve ter no máximo 500 caracteres"),
+                .min(1, "Desrição deve ter no mínimo 1 caractere")
+                .max(500, "Desrição deve ter no máximo 500 caracteres"),
     authorId: z.int("ID do autor é obrigatório e deve ser um valor numérico")
             .positive("ID do autor deve ser um valor numérico positivo")
 })

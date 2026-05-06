@@ -19,7 +19,8 @@ const userSchema = z.object({
     name: z.string("Nome é obrigatório e deve ser uma string")
             .min(3, "Nome deve ter no mínimo 3 caracteres")
             .max(255, "Nome deve ter no máximo 255 caracteres"),
-    email: z.email("Email deve ser um endereço de email válido"),
+    email: z.email("Email deve ser um endereço de email válido")
+            .max(191, "Email deve ter no máximo 191 caracteres"),
     pass: z.string("Senha é obrigatório e deve ser uma string")
             .min(6, "Senha deve ter no mínimo 3 caracteres")
             .max(300, "Senha deve ter no máximo 300 caracteres")
