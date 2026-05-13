@@ -25,6 +25,12 @@
   - Para que serve a função Partial? Serve para fazer a validação de uma rota que não usa todos os dados obrigatórios, flexibilizando pontualmente a validação.
   - Qual a diferença do parse para o safeParse? A diferença é que o parse lança uma exceção caso haja um erro na validação, exigindo o uso de try-catch, enquanto o safeParse devolve o erro como uma propriedade dentro de um objeto.
 - Tratamento de Erros
+  - Qual o papel do ErrorHandler? Quando é lançada uma exceção em um middleware anterior, o ErrorHandler trata o erro e exibe uma mensagem de erro genérica.
+  - Quais erros devem ser tratados pelo ErrorHandler e quais devem ser tratados no try-catch do controller? Respectivamente, erros mais genéricos e erros mais específicos da atividade do controller.
+  - Quais os parâmetros de entrada de um middleware de ErrorHandler? Os parâmetros são: error, req, res e next.
+- Query Params (/user?name=renan)
+  - Como capturar um parâmetro query da URL no Controller? Através do req.query, fazendo o destruct no nome desse parãmetro.
+  - Para que são utilizados em geral os query params? Para filtrar resultados de uma busca por parâmetros.
 - Autenticação com JWT
 
 ### Comandos Prisma

@@ -31,8 +31,16 @@ export const createPublication = async (publication) => {
     });
 }
 
-export const getPublications = async () => {
-    return await prisma.publication.findMany()
+export const getPublications = async (title) => {
+    return await prisma.publication.findMany(
+        title ? {
+            where: {
+                title: {
+                    contains: title
+                }
+            }
+        } : {}
+    )
 }
 
 export const deletePublication = async (id) => {
